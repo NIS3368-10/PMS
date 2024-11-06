@@ -20,7 +20,12 @@
             top: 10px;
             left: 10px;
         }
-
+        /*退出登录按钮*/
+        .logoutBtn{
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
         /* 模态窗口的样式 */
         .modal-content {
             background-color: white;
@@ -50,16 +55,25 @@
         }
 
        /* 课程表的样式 */
+        .schedule-title{
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
         .schedule-table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
             table-layout: fixed;/*固定表格布局*/
+            border: 2px solid #333;
         }
 
         .schedule-table th,
         .schedule-table td {
-            border: 1px solid #ccc;
+            border: 1px solid #333;
             padding: 10px;
             text-align: center;
             width: 12.5%;
@@ -137,11 +151,10 @@
     </div>
 
     <div class="button-container">
-        <button id="addCourseBtn">添加课程</button>
-        <button id="deleteCourseBtn" class="btn btn-danger">删除课程</button>
+        <button id="logoutBtn" class="btn btn-secondary">退出登录</button>
     </div>
 
-    <h1>课程表</h1>
+    <h1 class="scheldule-title">课程表</h1>
 
     <!-- 课程表 -->
     <table class="schedule-table">
@@ -597,6 +610,10 @@
         <button onclick="changeWeek(1)">下一周 ➡️</button>
     </div>
 
+    <div class="button-container">
+        <button id="addCourseBtn">添加课程</button>
+        <button id="deleteCourseBtn" class="btn btn-danger">删除课程</button>
+    </div>
     
     <!-- 模态窗口 -->
     <div id="addCourseModal">
@@ -679,11 +696,15 @@ document.getElementById("addCourseBtn").addEventListener("click", function() {
     document.getElementById("addCourseModal").style.display = "block";
 });
 
-// 点击头像按钮跳转到 index.html
+// 点击头像按钮跳转到 information.html
     document.getElementById("avatarBtn").addEventListener("click", function() {
-        window.location.href = "{% url 'information' %}";  // 假设你的 URL 名称为 'index'
+        window.location.href = "{% url 'information' %}";  // 假设你的 URL 名称为 'information'
     });
-    
+
+//点击退出登录跳转到 index.html
+    document.getElementById("logoutBtn").addEventListener("click", function() {
+        window.location.href = "{% url 'index' %}";  // 假设你的 URL 名称为 'index'
+    });
 // 关闭模态窗口的函数
 function closeModal(modal) {
     modal.style.display = "none";
