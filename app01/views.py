@@ -162,12 +162,6 @@ def reset_password(request):
         return render(request, "reset_password.html")
 
 
-# 登录页面的视图函数
-def home(request):
-    # 只有登录后才能访问的首页
-    return render(request, "home.html")
-
-
 def index(request):
     return render(request, "index.html")
 
@@ -245,7 +239,7 @@ def home(request):
         "phone_number": user.phone_number,
         "signature": user.signature,  # 个性签名
         "avatar": (
-            user.avatar.url if user.avatar else "default-avatar.png"
+            user.avatar if user.avatar else "default-avatar.png"
         ),  # 头像
     }
 

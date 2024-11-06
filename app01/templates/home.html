@@ -102,6 +102,7 @@
         -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
         animation: fadein 0.5s, fadeout 0.5s 2.5s;
     }
+    .avatar-img { width: 50px; /* 根据需要调整尺寸 */ height: 50px; border-radius: 50%; /* 使头像呈圆形 */ cursor: pointer; border: 2px solid #ccc; }
 
     @-webkit-keyframes fadein {
         from { bottom: 0; opacity: 0; }
@@ -132,7 +133,7 @@
     </video>
 
     <div class="button-container">
-        <button id="avatarBtn" class="btn btn-secondary">头像</button>
+        <img id="avatarBtn" src="{{ user.avatar }}" alt="头像" class="avatar-img" onclick="window.location.href='/personal-info'" />
     </div>
 
     <div class="button-container">
