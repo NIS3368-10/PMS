@@ -7,7 +7,12 @@ class CustomUser(AbstractUser):
     phone_number = models.CharField(
         max_length=15, unique=True, blank=True, null=True
     )
-    avatar = models.ImageField(upload_to="avatars/", null=True, blank=True)
+    avatar = models.ImageField(
+        upload_to="avatars/",
+        default="avatars/default-avatar.jpg",
+        null=True,
+        blank=True,
+    )
     signature = models.TextField(null=True, blank=True)
 
 

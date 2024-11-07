@@ -80,6 +80,8 @@
             height: 50px;
             overflow: hidden;
             text-overflow: ellipsis;
+            font-size: 24px;
+            font-weight: bold;
         }
         
         /*课程名*/
@@ -92,6 +94,8 @@
             justify-content: center;
             align-items: center;
             color: #333333;
+            font-size: 24px;
+            font-weight: bold;
         }
         
         /*浮窗*/
@@ -116,7 +120,7 @@
         -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
         animation: fadein 0.5s, fadeout 0.5s 2.5s;
     }
-    .avatar-img { width: 50px; /* 根据需要调整尺寸 */ height: 50px; border-radius: 50%; /* 使头像呈圆形 */ cursor: pointer; border: 2px solid #ccc; }
+    .avatar-img { width: 50px; /* 根据需要调整尺寸 */ height: 50px; border-radius: 50%; object-fit: cover; /* 使头像呈圆形 */ cursor: pointer; border: 2px solid #ccc; }
 
     @-webkit-keyframes fadein {
         from { bottom: 0; opacity: 0; }
@@ -154,7 +158,7 @@
         <button id="logoutBtn" class="btn btn-secondary">退出登录</button>
     </div>
 
-    <h1 class="scheldule-title">课程表</h1>
+    <h1 class="scheldule-title" style = "text-align:center">课程表</h1>
 
     <!-- 课程表 -->
     <table class="schedule-table">
@@ -178,49 +182,49 @@
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '1' and course.time_slot == '1' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '2' and course.time_slot == '1' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '3' and course.time_slot == '1' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '4' and course.time_slot == '1' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '5' and course.time_slot == '1' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '6' and course.time_slot == '1' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '7' and course.time_slot == '1' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
@@ -230,49 +234,49 @@
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '1' and course.time_slot == '2' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '2' and course.time_slot == '2' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '3' and course.time_slot == '2' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '4' and course.time_slot == '2' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '5' and course.time_slot == '2' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '6' and course.time_slot == '2' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '7' and course.time_slot == '2' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
@@ -282,49 +286,49 @@
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '1' and course.time_slot == '3' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '2' and course.time_slot == '3' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '3' and course.time_slot == '3' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '4' and course.time_slot == '3' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '5' and course.time_slot == '3' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '6' and course.time_slot == '3' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '7' and course.time_slot == '3' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
@@ -334,49 +338,49 @@
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '1' and course.time_slot == '4' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '2' and course.time_slot == '4' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '3' and course.time_slot == '4' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '4' and course.time_slot == '4' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '5' and course.time_slot == '4' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '6' and course.time_slot == '4' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '7' and course.time_slot == '4' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
@@ -386,49 +390,49 @@
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '1' and course.time_slot == '5' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '2' and course.time_slot == '5' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '3' and course.time_slot == '5' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '4' and course.time_slot == '5' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '5' and course.time_slot == '5' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '6' and course.time_slot == '5' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '7' and course.time_slot == '5' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
@@ -438,49 +442,49 @@
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '1' and course.time_slot == '6' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '2' and course.time_slot == '6' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '3' and course.time_slot == '6' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '4' and course.time_slot == '6' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '5' and course.time_slot == '6' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '6' and course.time_slot == '6' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
             <td>
                 {% for course in courses %}
                     {% if course.day_of_week == '7' and course.time_slot == '6' %}
-                        <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                        <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                     {% endif %}
                 {% endfor %}
             </td>
@@ -491,14 +495,14 @@
                 <div>
                     {% for course in courses %}
                         {% if course.day_of_week == '1' and course.time_slot == '7' %}
-                            <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                            <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                         {% endif %}
                     {% endfor %}
                 </div>
                 <div>
                     {% for course in courses %}
                         {% if course.day_of_week == '1' and course.time_slot == '8' %}
-                            <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                            <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                         {% endif %}
                     {% endfor %}
                 </div>
@@ -507,14 +511,14 @@
                 <div>
                     {% for course in courses %}
                         {% if course.day_of_week == '2' and course.time_slot == '7' %}
-                            <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                            <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                         {% endif %}
                     {% endfor %}
                 </div>
                 <div>
                     {% for course in courses %}
                         {% if course.day_of_week == '2' and course.time_slot == '8' %}
-                            <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                            <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                         {% endif %}
                     {% endfor %}
                 </div>
@@ -523,14 +527,14 @@
                 <div>
                     {% for course in courses %}
                         {% if course.day_of_week == '3' and course.time_slot == '7' %}
-                            <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                            <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                         {% endif %}
                     {% endfor %}
                 </div>
                 <div>
                     {% for course in courses %}
                         {% if course.day_of_week == '3' and course.time_slot == '8' %}
-                            <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                            <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                         {% endif %}
                     {% endfor %}
                 </div>
@@ -539,14 +543,14 @@
                 <div>
                     {% for course in courses %}
                         {% if course.day_of_week == '4' and course.time_slot == '7' %}
-                            <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                            <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                         {% endif %}
                     {% endfor %}
                 </div>
                 <div>
                     {% for course in courses %}
                         {% if course.day_of_week == '4' and course.time_slot == '8' %}
-                            <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                            <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                         {% endif %}
                     {% endfor %}
                 </div>
@@ -555,14 +559,14 @@
                 <div>
                     {% for course in courses %}
                         {% if course.day_of_week == '5' and course.time_slot == '7' %}
-                            <div style="background-color: {{ course.color }};" class="course-name"{{ course.name }}</div>
+                            <div style="color: {{ course.color }};" class="course-name"{{ course.name }}</div>
                         {% endif %}
                     {% endfor %}
                 </div>
                 <div>
                     {% for course in courses %}
                         {% if course.day_of_week == '5' and course.time_slot == '8' %}
-                            <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                            <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                         {% endif %}
                     {% endfor %}
                 </div>
@@ -571,14 +575,14 @@
                 <div>
                     {% for course in courses %}
                         {% if course.day_of_week == '6' and course.time_slot == '7' %}
-                            <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                            <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                         {% endif %}
                     {% endfor %}
                 </div>
                 <div>
                     {% for course in courses %}
                         {% if course.day_of_week == '6' and course.time_slot == '8' %}
-                            <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                            <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                         {% endif %}
                     {% endfor %}
                 </div>
@@ -587,14 +591,14 @@
                 <div>
                     {% for course in courses %}
                         {% if course.day_of_week == '7' and course.time_slot == '7' %}
-                            <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                            <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                         {% endif %}
                     {% endfor %}
                 </div>
                 <div>
                     {% for course in courses %}
                         {% if course.day_of_week == '7' and course.time_slot == '8' %}
-                            <div style="background-color: {{ course.color }};" class="course-name">{{ course.name }}</div>
+                            <div style="color: {{ course.color }};" class="course-name">{{ course.name }}</div>
                         {% endif %}
                     {% endfor %}
                 </div>
